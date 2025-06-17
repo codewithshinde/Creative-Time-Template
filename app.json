@@ -1,15 +1,18 @@
 {
   "expo": {
-    "name": "rn-material-kit-free",
-    "description": "React Native - Material Kit Free",
-    "slug": "rn-material-kit-free",
+    "name": "billbuddy-pos",
+    "slug": "billbuddy-pos",
+    "version": "1.0.0",
+    "owner": "billbuddy",
+    "sdkVersion": "48.0.0",
+    "githubUrl": "",
+    "description": "BillBuddy POS - Point of Sale for BillBuddy",
     "privacy": "unlisted",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.8.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",

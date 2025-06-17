@@ -13,6 +13,9 @@ import React from "react";
 import SettingsScreen from "../screens/Settings";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
+import PinLoginScreen from "../screens/login";
+import UsersScreen from "../screens/users";
+import ProductsScreen from "../screens/products-screen";
 
 const { width } = Dimensions.get("screen");
 
@@ -330,13 +333,16 @@ export default function OnboardingStack(props) {
         headerShown: false,
       }}
     >
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Onboarding"
         component={OnboardingScreen}
         option={{
           headerTransparent: true,
         }}
-      />
+      /> */}
+      <Stack.Screen name="ProductsScreen" component={ProductsScreen} />
+      <Stack.Screen name="Users" component={UsersScreen} />
+      <Stack.Screen name="Login" component={PinLoginScreen} />
       <Stack.Screen name="App" component={AppStack} />
     </Stack.Navigator>
   );

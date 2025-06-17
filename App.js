@@ -1,15 +1,3 @@
-/*!
-
- =========================================================
- * Material Kit React Native - v1.10.1
- =========================================================
- * Product Page: https://demos.creative-tim.com/material-kit-react-native/
- * Copyright 2019 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-kit-react-native/blob/master/LICENSE)
- =========================================================
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { useState, useEffect, useCallback } from "react";
 import { Platform, StatusBar, Image } from "react-native";
 import { Asset } from "expo-asset";
@@ -18,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import * as SplashScreen from "expo-splash-screen";
 import { Images, products, materialTheme } from "./constants/";
 import Screens from "./navigation/Screens";
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";
@@ -51,6 +40,9 @@ export default function App() {
     async function prepare() {
       try {
         //Load Resources
+        await ScreenOrientation.lockAsync(
+          ScreenOrientation.OrientationLock.LANDSCAPE
+        );
         await _loadResourcesAsync();
       } catch (e) {
         console.warn(e);
